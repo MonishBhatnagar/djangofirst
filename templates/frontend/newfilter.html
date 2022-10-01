@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>revision</title>
+</head>
+<body>
+    <input id="search" type="text" placeholder="search here">
+    <p>find the word from list</p>
+
+    <ol id="list">
+        <li>Akshay</li>
+        <li>nikhil</li>
+        <li>livewire</li>
+        <li>django</li>
+        <li>mernstack</li>
+        <li>python</li>
+    </ol>
+    <script>
+        $(document).ready(function(){
+            $("#search").on("keyup",function(){
+                var x=$(this).val().toLowerCase();
+                $("#list li").filter(function(){
+                    $(this).toggle($(this).text().toLowerCase()
+                    .indexOf(x)>-1)
+                });
+            });
+        });
+    </script>
+</body>
+</html>

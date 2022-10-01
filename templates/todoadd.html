@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+{%block content%}
+<head>
+    <style>
+        form{
+            margin-top:200px;
+            margin-left:200px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+    </style>
+
+</head>
+
+<h1 style="margin-top:-250px;margin-left:80px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Share Your Valuable Feedback With Us...</h1>
+<form method="POST">
+{%csrf_token%}
+{{ form.as_p}}
+<button type="submit">Submit</button>
+</form>
+<img style="float:right;margin-top:-1000px;margin-right:100px;" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=656,h=962,fit=crop/ginza37pa0/cust-A3QQRDJrPNTa3eWE.png" alt="">
+<br><br><br><br>
+{%endblock%}
+

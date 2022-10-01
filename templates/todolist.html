@@ -1,0 +1,112 @@
+{% extends 'base.html'%}
+{% block content%}
+<head>
+    <style>
+        .con5{
+            background-color:rgb(207, 207, 230);
+        }
+        .row{
+            content:"";
+            clear: both;
+
+        }
+        .column{
+            display:table;
+            width:50% ;
+        }
+        .jump{
+            margin-top:-750px;
+        }
+
+    </style>
+</head>
+<!-- <head>
+    <style>
+        table,th,tr,td{
+            border:2px solid rgb(140, 152, 152);
+            text-align: center;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            
+        }
+        .feed{
+            margin-left:300px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size:40px;
+            color: rgb(47, 46, 46);
+            margin-top:-700px;
+        }
+
+    </style>
+</head>
+<h1 class="feed">All Feedbacks</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Created At</th>
+            <th>Updated At</th>
+            <th>Update/Delete</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for todo in todos %}
+        <tr>
+            <td>{{todo.title}}</td>
+            <td>{{todo.description}}</td>
+            <td>{{todo.name}}</td>
+            <td>{{todo.email}}</td>
+            <td>{{todo.created_at}}</td>
+            <td>{{todo.updated_at}}</td>
+            <td><a href="{% url 'todo:todoedit' todo.id%}"><button>Edit</button></a>
+            <a href="{% url 'todo:tododelete' todo.id%}"><button>Delete</button></a></td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+<div id="table" class="row jump">
+    <marquee style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size:40px;background-color: rgb(207, 207, 247);" behavior="" direction="right">Reviewses </marquee>
+    <div class="column"><img style="width:100%;height:530px" src="https://thumbs.dreamstime.com/b/blank-notebook-text-please-review-us-white-background-calculator-office-tools-blank-notebook-text-please-218660181.jpg" alt=""></div>
+    <div class="column">
+        <div class="container con5">
+            {%for todo in todos%}
+            <h4>{{todo.name}}</h4>
+            
+            <h4>{{todo.title}}</h4>
+            <h4>{{todo.description}}</h4>
+            <p>{{todo.created_at}}</p>
+            <p>{{todo.updated_at}}</p>
+            <a href="{%url 'todo:todoedit' todo.id%}"><button>Edit</button></a>
+           <a href="{%url 'todo:tododelete' todo.id%}"> <button>delete</button></a>
+            <hr><hr>
+            {%endfor%}
+        
+        </div>
+    </div>
+</div>
+<script>
+    
+
+
+
+function exportF(elem) {
+  var table = document.getElementById("table");
+  var html = table.outerHTML;
+  var url = 'data:application/vnd.ms-excel,' + escape(html); // Set your html table into url 
+  elem.setAttribute("href", url);
+  elem.setAttribute("download", "export.xls"); // Choose the file name
+  return false;
+}
+
+</script>
+<button><a id="downloadLink" onclick="exportF(this)">Download into Excel</a></button>
+
+
+
+
+
+{%endblock%}

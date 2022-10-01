@@ -1,0 +1,66 @@
+{% extends 'base.html'%}
+{%block content%}
+<head>
+    <style>
+        .img1{
+            margin-bottom: 600px;
+        }
+        .con{
+            background-color: rgb(249, 240, 230);
+        }
+       .butt{
+        background-color: rgb(244, 236, 226);
+        height:50px;
+        width:200px;
+        font-size:20px;
+
+
+
+        }
+        .butt:hover{
+          background-color: black;
+          color: aliceblue;
+
+        }
+        .con2{
+          background-color: rgb(252, 244, 234);
+          height:50%;
+        }
+
+        
+    </style>
+</head>
+<div class="row">
+    <div class="col-xs-6 col-md-5 img1">
+      <a href="#" class="thumbnail">
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=656,h=682,fit=crop/ginza37pa0/img-Aok3lWLrBehKDwMQ.png" alt="...">
+      </a>
+    </div>
+   
+    <div class="col-xs-6 col-md-5">
+        <h1 style="margin-left:200px;margin-top:100px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size:80px;">How Ginza <br> came to be </h1><br><br>
+      
+        <p style="text-align:justify;margin-left:200px;">Ginza had an unconventional start as a restaurant. Originally opening as a pop-up event, our original aim was to showcase the unique culinary stylings of our head chef, Kabu Natsu.   </p><br><br><br>
+       
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3 col-md-5">
+      <p style="margin-left:100px;">When it became clear that there was going to be continued interest in the eating experience we’d curated, we found a permanent location, expanded our menu, and began regular service. That was 5 years ago, and we’re still going strong today.</p><br><br><br>
+      <p style="margin-left:100px;">Though we’ve come a long way from where we started (we’re up to 12 chefs and 10 servers on a normal evening), our focus has ever shifted. When you eat with us, you can expect to find new flavors, existing foods, and a sparkling evening.</p>
+    </div>
+    <div class="col-xs-3 col-md-5">
+        <a href="#" class="thumbnail">
+          <img style="margin-top:-200px;margin-left:100px" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=656,h=825,fit=crop/ginza37pa0/OurStoryImg-mP44RxVMjnfeNDrZ.png" alt="...">
+        </a>
+      </div>
+    
+  </div>
+  <br><br><br>
+  <div class="container con2">
+    <h1 style="text-align:center;padding:100px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 50px;">Book a table</h1>
+    <p style="text-align:center;">Reserving a table beforehand means less waiting. <br> Groups of 8 or more must reserve ahead of time.</p>
+    <a href="http://127.0.0.1:8000/todos/contact/"><button class="butt" style="margin-left:550px;padding:10px">Book now</button></a>
+  <br><br>  
+  </div>
+  {%endblock%}

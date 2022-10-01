@@ -1,0 +1,64 @@
+{% extends 'base.html'%}
+{%block content%}
+<head>
+    <style>
+        .cont{
+            margin-left:300px;
+            margin-top:-580px;
+        }
+        .button{
+            background-color: rgb(22, 155, 22);
+            height:50px;
+            width:200px;
+            font-size:25px;
+            color: aliceblue;
+            margin-left:200px;
+        }
+        .button:hover{
+            background-color: rgb(24, 223, 24); ;
+        }
+        .butt{
+            background-color: rgb(224, 32, 32);
+            height:50px;
+            width:200px;
+            font-size:25px;
+            color: aliceblue;
+            
+
+        }
+        .butt:hover{
+            background-color: red;
+
+        }
+    </style>
+</head>
+<div class="container cont">
+       
+    <h1><b> sign-up </b> </h1>
+    <p>please fill in this form to create an account</p>
+    
+    <label for="user-name"><b>username</b></label><br>
+    <input type="text" placeholder="enter your name" name="user-name" required><br><br>
+    
+    <label for="password"><b>password</b></label><br>
+    <input type="password" placeholder="enter password" name="password" required><br><br>
+    
+    <label for=" password"><b>re-password</b></label><br>
+    <input type="password" placeholder="confirm your password" name="passsword" required><br>
+    
+    <label>
+        <input type="checkbox" checked="checked" name="remember">Remember me
+    </label><br>
+    <p>By creating an account you agree to our <a href="">Terms & privacy</a></p>
+    <i style="margin-left:400px;" class="fa fa-twitter-square" aria-hidden="true"></i>
+    <i  class="fa fa-facebook-official" aria-hidden="true"></i>
+    <i class="fa fa-google-plus-square" aria-hidden="true"></i>
+    <i class="fa fa-envelope" aria-hidden="true"></i>
+    
+    <br><br><br>
+    
+    </form>
+    <button type="submit" class="button"name="signup">signup</button>
+    <button type="button" class="butt" name="home"> Cancle</button>
+    </div>
+{%endblock%}
